@@ -1,3 +1,8 @@
+/*
+ * This file is part of pattern recognition network (prNet), a program to find patterns in data-structures
+ * Copyright (C) 2022  Elija Giesbrecht
+ * Published under GPLv3-or-later license
+ */
 package ext;
 
 import java.io.ByteArrayInputStream;
@@ -36,7 +41,7 @@ public class InferedBlobHandler <ObjectType extends Serializable> implements Ser
 	    pstmt.close();
 	}
 	
-	public List<ObjectType> get(String sqlcondition/*MUSS das Blob-Feld zurückgeben!*/) throws SQLException, ClassNotFoundException, IOException {
+	public List<ObjectType> get(String sqlcondition/*MUSS das Blob-Feld zurï¿½ckgeben!*/) throws SQLException, ClassNotFoundException, IOException {
 		List<ObjectType> ret=new ArrayList<>();
 		Statement stat=conn.createStatement();
 		boolean exists=stat.executeQuery("select exists("+sqlcondition+")").getBoolean(1);

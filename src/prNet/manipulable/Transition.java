@@ -1,3 +1,8 @@
+/*
+ * This file is part of pattern recognition network (prNet), a program to find patterns in data-structures
+ * Copyright (C) 2022  Elija Giesbrecht
+ * Published under GPLv3-or-later license
+ */
 package prNet.manipulable;
 
 public interface Transition<T> {
