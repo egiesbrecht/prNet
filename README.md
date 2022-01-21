@@ -9,6 +9,7 @@ A program used to find patterns in complex data-structures
 This is a pretty abstract java-program made to find patterns in data-structures like lists or any other itarable structure. This code is rather meant to be included in other projects than to be used on its own.
 
 ## How to use
+ - [The database](#TheDatabase)
  - [ext-package](#ext-package)
  - [prNet-package](#prNet-package)
    - [Comparison.java](#Comparison)
@@ -24,6 +25,9 @@ This is a pretty abstract java-program made to find patterns in data-structures 
  - [demo-package](#demo-package)
    - [TwoDimensionalMatrix.java](#TwoDimensionalMatrix)
    - [MatrixDemo.java](#MatrixDemo)
+
+### The Database
+This project uses a sqlite database to store found patterns. To manage this, I used the sqlite-jdbc driver. I got it from [here](https://github.com/xerial/sqlite-jdbc). The in this repo contained jar file may not be up to date but it is the version I used to develop and test this project.
 
 ### ext-package
 The "ext" package manages some general usable tools like a file- and a Blob-handler. The class General.java contains some needed but abstract, some usable and some unnecessary methods. You can use something from here but definitely don't need to.
