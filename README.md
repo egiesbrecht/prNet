@@ -41,6 +41,9 @@ This is a basic pattern. It contains a list of elements where a null value is tr
 #### Pattern
 This object extends from [BasePattern](#BasePattern) but implements a counter to know how often a pattern occured in the direct comparing process. To be clear, a zero in there means that it wasn't found in termes of comparing all found patterns, so in occurs once in the given data-set.
 
+#### AspectManager
+The AspectManager is an easy tool to manage different aspect under which a data-structure should be analyzed. Most of the classes and method already use this tool to get the needed information they need beside the current set of data they will be analyzing.
+
 #### PatternUsage
 Most of the methods have a javadoc attached but here are the most important of them:
 
