@@ -30,7 +30,17 @@ This is a pretty abstract java-program made to find patterns in data-structures 
 The "ext" package manages some general usable tools like a file- and a Blob-handler. The class General.java contains some needed but abstract, some usable and some unnecessary methods. You can use something from here but definitely don't need to.
 
 ### prNet-package
-This is the interesting part. This package contains all necessary methods to actual search for and save patterns. Most of those processes are managed in the PatterUsage.java class:
+This is the interesting part. This package contains all necessary methods to actual search for and save patterns.
+
+#### Comparison
+This interface is meant to be used as a lambda expression to compare two elements in the structures that may contain patterns. This basically works like a BiPredicate but has different method names and, most important, are serializable.
+
+#### BasePattern
+This is a basic pattern. It contains a list of elements where a null value is treated like a "\*" in regex. It also contains a [Comparison](#Comparison) that defines, how two elements of the list are compared.
+
+#### Pattern
+This object extends from [BasePattern](#BasePattern) but implements a counter to know how often a pattern occured in the direct comparing process. To be clear, a zero in there means that it wasn't found in termes of comparing all found patterns, so in occurs once in the given data-set.
+
 #### PatternUsage
 Most of the methods have a javadoc attached but here are the most important of them:
 
