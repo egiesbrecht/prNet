@@ -25,23 +25,30 @@ This method returns all patterns in the given two-dimensional list 'analyzeableE
 
 - *public static <T> Map<String, Double> findMatchingAuthors(List<Pattern<T>> text, Aspect<T> aspect, Connection conn, boolean ignoreLow, int mode, int min)*<br>
 This method finds all authors of patterns in the database which match with the given list of patterns.
-This can be done in 4 different ways which are represented with the "mode"-variable through the integers 0 to 3. The default is 2 and should always be used if you aren't sure you need another one.<br>
-    The modes:
-    * 0: counts the total amount of matching patterns in the database.
-    * 1: counts the total amount of matching patterns in the database but only uses the highest of them later.
-    * 2: counts the amount of patterns and then calculates the percentage of the matching pattern to all saved patterns by the
-    * author.
-    * 3: counts the amount of patterns and then calculates the percentage of the matching pattern to all saved patterns by the
+This can be done in 4 different ways which are represented with the "mode"-variable through the integers 0 to 3. The default is 2 and should always be used if you aren't sure you need another one.<br><br>
+The modes:
+ 
+    - 0: counts the total amount of matching patterns in the database.
+    - 1: counts the total amount of matching patterns in the database but only uses the highest of them later.
+    - 2: counts the amount of patterns and then calculates the percentage of the matching pattern to all saved patterns by the
+    - author.
+    - 3: counts the amount of patterns and then calculates the percentage of the matching pattern to all saved patterns by the
     author but only uses the highest of them later.
     Note: the "author" is the creator the given patterns and often defined before. If you don't know what to use here,
     you should look up how vou've analyzed what ever you did to get the patterns that are used here in the text-
-    parameter.
-    <br>
-    Parameters:
-  
+    parameter. <br><br>
+Parameters:
+ 
   - text: The list of patterns that will be compared with all authors in the database
   - aspect: The aspect under which the patterns were analyzed
   - conn The SQL-Connection to the database
   - ignoreLow: Decides if every pattern that was found only once should be ignored or not. This should be true if you test a structure that is already saved in the database because it's own patterns won't count in the result and therefore will be ignored afterwards. It's practically deletes all self-references.
   - mode:The above explained mode
+ <br>
+ 
+ 
+- *public static boolean match(List<T> environment, P pattern)*<br>
+ This method checks if the pattern matches with the list 'environment'. Pretty much like simple regex.
+
+ 
   
