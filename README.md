@@ -16,7 +16,6 @@ This is a pretty abstract java-program made to find patterns in data-structures 
    - [Pattern.java](#Pattern)
    - [AspectManager.java](#AspectManager)
    - [PatternUsage.java](#PatternUsage)
-   - [SQLoperations.java](#SQLoperations)
    - [Assigner.java](#Assigner)
  - [prNet.manipulable-package](#prNet.manipulable-package)
    - [Transition.java](#Transition)
@@ -39,10 +38,30 @@ This interface is meant to be used as a lambda expression to compare two element
 This is a basic pattern. It contains a list of elements where a null value is treated like a "\*" in regex. It also contains a [Comparison](#Comparison) that defines, how two elements of the list are compared.
 
 #### Pattern
-This object extends from [BasePattern](#BasePattern) but implements a counter to know how often a pattern occured in the direct comparing process. To be clear, a zero in there means that it wasn't found in termes of comparing all found patterns, so in occurs once in the given data-set.
+This object extends from [BasePattern](#BasePattern) but implements a counter to know how often a pattern occured in the direct comparing process. To be clear, a zero in there means that it wasn't found in termes of comparing all found patterns, so in occurs once in the given data-set. 
 
 #### AspectManager
 The AspectManager is an easy tool to manage different aspect under which a data-structure should be analyzed. Most of the classes and method already use this tool to get the needed information they need beside the current set of data they will be analyzing.
+To define such an aspect, use this method:<br>
+ - #### *define(String name, Class<T> classType, Comparison<T, T> comparison, String table, Function<T, String> keyFunction, Statement stat)*<br>
+   Parameters:
+
+   - name: The name of an aspect to recognize it later
+   - classType: This is optional. This here is just the class type of the infered object-type so it isn't necessary to cast any object within the method in the lambda expression
+   - comparison: The [Comparison](#Comparison) used to compare two elements
+   - table: The name of the table in the database in which all found patterns will be stored. If you don't call a method that writes some patterns into the database, this should be just set to something like "table"
+   - keyFunction: A lambda expression used to convert an element into a string, used to create an unique key for all equal patterns
+   - stat: The SQL-Statement used to connect with the database, if needed
+ 
+To receive a single aspect manually, use the method
+ - #### *getAspect(Class<T> classType, String name)*
+   Parameters:
+
+   - classType: As above just the class type of the infered object type
+   - name: The name of the aspect you want to get
+ 
+If a method doesn't require a comparison or a single aspect as a parameter, it will use all aspect which were defined up to this point.
+ 
 
 #### PatternUsage
 Most of the methods have a javadoc attached but here are the most important of them:
