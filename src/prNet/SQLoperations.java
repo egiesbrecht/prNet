@@ -16,7 +16,7 @@ import ext.BlobHandler;
 import ext.InferedBlobHandler;
 import prNet.AspectManager.Aspect;
 
-public abstract class SQLoperations {
+abstract class SQLoperations {
 	
 	public static <T extends Serializable> List<BasePattern<T>> getAllPatternsByAuthor(String author, Aspect<T> aspect, Connection conn) throws ClassNotFoundException, SQLException, IOException {
 		return BlobHandler.get("select blob from "+aspect.table()+" where author='"+author+"'", conn);
