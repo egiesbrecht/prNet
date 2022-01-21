@@ -104,4 +104,13 @@ Most of the methods have a javadoc attached but here are the most important of t
  
 - #### *public static void findAndSavePatterns(List<List<T>> analyzeableElements, String author, Statement stat, Aspect<T> aspect)*<br>
  
-  
+ 
+#### Assigner
+A class used to assign values to a key. Some classes in this project extend from it to connect a special value to it if needed. This isn't a core part of this project but can be an useful extension.
+ 
+
+### prNet.manipulable-package
+ This package implements tools to manipulate lists and patterns.
+#### Transition
+ 
+ 
