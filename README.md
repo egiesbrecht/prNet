@@ -11,9 +11,20 @@ This is a pretty abstract java-program made to find patterns in data-structures 
 ## How to use
  - [ext-package](#ext-package)
  - [prNet-package](#prNet-package)
+   - [Comparison.java](#Comparison)
+   - [BasePattern.java](#BasePattern)
+   - [Pattern.java](#Pattern)
+   - [AspectManager.java](#AspectManager)
    - [PatternUsage.java](#PatternUsage)
+   - [SQLoperations.java](#SQLoperations)
+   - [Assigner.java](#Assigner)
  - [prNet.manipulable-package](#prNet.manipulable-package)
+   - [Transition.java](#Transition)
+   - [ManipulablePattern.java](#ManipulablePattern)
+   - [ManipulationUsage.java](#ManipulationUsage)
  - [demo-package](#demo-package)
+   - [TwoDimensionalMatrix.java](#TwoDimensionalMatrix)
+   - [MatrixDemo.java](#MatrixDemo)
 
 ### ext-package
 The "ext" package manages some general usable tools like a file- and a Blob-handler. The class General.java contains some needed but abstract, some usable and some unnecessary methods. You can use something from here but definitely don't need to.
