@@ -112,5 +112,12 @@ A class used to assign values to a key. Some classes in this project extend from
 ### prNet.manipulable-package
  This package implements tools to manipulate lists and patterns.
 #### Transition
+ The Transition interface represents a lambda expression that tells how an element will be manipulated, if all necessary conditions match.
+ 
+#### ManipulablePattern
+ Another object that extends from the BasePattern class. Beside the standart-pattern-stuff this object keeps a [Transition](#Transition) and a special [Comparison](#Comparison) clause to tell if a [Transition](#Transition) can be applied.
+ 
+ #### ManipulationUsage
+ This class extended the [PatternUsage](#PatternUsage) by the method *manipulate(List<T> environment, ManipulablePattern<T> pattern)*. It first checks if the list 'environment' matches the pattern based on the Comparison clause and if it does, it manipulates those positions as the [Transition](#Transition) describes.
  
  
