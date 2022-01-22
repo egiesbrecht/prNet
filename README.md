@@ -4,6 +4,7 @@ A program used to find patterns in complex data-structures
 ## Content
 - [About](#about)
 - [How to use](#how-to-use)
+- [What this project is and what it is not](#What-this-is-and-what-not)
 
 ## About
 This is a pretty abstract java-program made to find patterns in data-structures like lists or any other itarable structure. This code is rather meant to be included in other projects than to be used on its own.
@@ -120,4 +121,16 @@ A class used to assign values to a key. Some classes in this project extend from
  #### ManipulationUsage
  This class extended the [PatternUsage](#PatternUsage) by the method *manipulate(List<T> environment, ManipulablePattern<T> pattern)*. It first checks if the list 'environment' matches the pattern based on the Comparison clause and if it does, it manipulates those positions as the [Transition](#Transition) describes. In my last tests this achieved differences of ~3% to ~8% with the *findMatchingAuthors* method of the [PatternUsage](#PatternUsage) class.
  
+ ### demo-package
+ A package that contains a demonstration of how to apply parts of this project.
  
+ #### TwoDimensionalMatrix
+   Just a simple implementation of a two-dimensional-matrix which is build out of an array of nodes.
+ 
+ #### MatrixDemo
+   A demonstration of how the [PatternUsage](#PatternUsage) class can be used to analyze an array of random matrices.
+
+ 
+## What this project is and what not
+ This is the codebase for some of my projects which handle larger groups of information. It is designed to handle abstract data, rather than specific one.<br>
+ It is not a ready-to-go tool analyze files, complete programs or databases. If you want to apply this code to a larger scale of data-structures, go for it.
