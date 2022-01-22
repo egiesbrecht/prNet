@@ -133,4 +133,4 @@ A class used to assign values to a key. Some classes in this project extend from
  
 ## What this project is and what not
  This is the codebase for some of my projects which handle larger groups of information. It is designed to handle abstract data, rather than specific one.<br>
- It is not a ready-to-go tool analyze files, complete programs or databases. If you want to apply this code to a larger scale of data-structures, go for it.
+ It is not a ready-to-go tool to analyze files, complete programs or databases. If you want to apply this code to a larger scale of data-structures, go for it, as long as you respect the license.
